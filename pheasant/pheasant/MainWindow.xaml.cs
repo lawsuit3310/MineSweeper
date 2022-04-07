@@ -20,9 +20,18 @@ namespace pheasant
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Label> labels = new List<Label>();
         public MainWindow()
         {
             InitializeComponent();
+            PlayArea.UpdateLayout();
+            for (int i = 0; i < 81; i++)
+            {
+                labels.Add(new Label());
+                labels[i].Width = 100;
+                labels[i].Height = 100;
+            }
+
         }
     }
 }
